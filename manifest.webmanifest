@@ -1,0 +1,11 @@
+{
+  "name": "成都・九寨溝・四姑娘山 2026",
+  "short_name": "成都旅遊",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f7f3ee",
+  "theme_color": "#a8322a",
+  "icons": [
+    { "src": "assets/icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
