@@ -279,6 +279,96 @@ main { max-width: 960px; margin: 0 auto; padding: 0 16px; }
 }
 .btn-map.alt { background: var(--surface-2); color: var(--text); }
 
+/* ===== 天氣、高德連結 ===== */
+.wx {
+  margin: -4px 0 8px;
+  font-size: .85rem;
+  color: var(--muted);
+}
+a.pin { color: var(--jade); text-decoration: none; border-bottom: 1px dashed currentColor; }
+a.pin::before { content: "📍"; font-size: .85em; margin-right: 1px; }
+a.pin b { color: inherit; }
+
+/* ===== 詳細行程彈窗 ===== */
+.btn-detail {
+  display: block;
+  width: 100%;
+  margin-top: 12px;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface-2);
+  color: var(--text);
+  font: inherit; font-weight: 700; font-size: .92rem;
+  cursor: pointer;
+}
+.btn-detail:hover { border-color: var(--red); color: var(--red); }
+
+dialog.sheet {
+  width: min(680px, 100%);
+  max-width: 100%;
+  max-height: 88vh;
+  margin: auto auto 0;
+  padding: 0;
+  border: 0;
+  border-radius: 18px 18px 0 0;
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: 0 -8px 40px rgba(0,0,0,.25);
+  overflow: hidden;
+}
+dialog.sheet[open] { display: flex; flex-direction: column; animation: sheet-up .22s ease-out; }
+dialog.sheet::backdrop { background: rgba(20, 14, 10, .55); }
+@keyframes sheet-up { from { transform: translateY(40px); opacity: 0; } to { transform: none; opacity: 1; } }
+@media (min-width: 768px) {
+  dialog.sheet { margin: auto; border-radius: 18px; max-height: 85vh; }
+}
+body:has(dialog[open]) { overflow: hidden; }
+
+.sheet-head {
+  display: flex; align-items: center; gap: 12px;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--line);
+  background: var(--surface);
+}
+.sheet-head h3 { flex: 1; margin: 0; font-size: 1.1rem; }
+.sheet-close {
+  flex: none;
+  width: 36px; height: 36px;
+  border: 0; border-radius: 50%;
+  background: var(--surface-2); color: var(--text);
+  font-size: 1rem; cursor: pointer;
+}
+.sheet-body {
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 4px 16px calc(24px + env(safe-area-inset-bottom));
+  font-size: .95rem;
+}
+.sheet-body h4 { margin: 20px 0 8px; font-size: 1rem; }
+.sheet-body h4.line { padding-left: 10px; border-left: 4px solid var(--jade); }
+.sheet-body h4.line.mid { border-left-color: var(--gold); }
+.sheet-body h4.line.left { border-left-color: #3b82c4; }
+.sheet-body p { margin: 8px 0; }
+.steps { margin: 0; padding-left: 1.4em; }
+.steps li { margin: 6px 0; }
+.steps li::marker { color: var(--red); font-weight: 700; }
+.tip, .warn {
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: .9rem;
+}
+.tip { background: var(--jade-soft); }
+.warn { background: var(--todo-soft); color: var(--text); }
+table.mini { width: auto; margin: 8px 0; font-size: .9rem; }
+table.mini td { padding: 6px 14px 6px 0; border-bottom: 1px dashed var(--line); vertical-align: top; }
+table.mini tr { display: table-row; padding: 0; border: 0; }
+table.mini td:first-child { white-space: normal; }
+.map-grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+.map-fig { margin: 8px 0; }
+.map-fig img { width: 100%; border-radius: 10px; border: 1px solid var(--line); background: #fff; }
+.map-fig figcaption { margin-top: 4px; font-size: .8rem; color: var(--muted); }
+
 /* ===== 卡片 / 表格 ===== */
 .cards { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
 .card {
@@ -377,7 +467,8 @@ td:first-child { white-space: nowrap; font-weight: 700; }
 .food-list li::marker { color: var(--red); }
 
 .chips { display: flex; flex-wrap: wrap; gap: 8px; }
-.chips span {
+.chips a.pin { border-bottom: 0; }
+.chips span, .chips a.pin {
   padding: 6px 14px;
   border-radius: 999px;
   background: var(--surface);

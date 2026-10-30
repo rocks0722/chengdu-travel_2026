@@ -90,9 +90,29 @@
     sections.forEach(function (s) { if (s) io.observe(s); });
   }
 
+  // ===== 詳細行程彈窗 =====
+  function initDialogs() {
+    document.querySelectorAll('[data-open]').forEach(function (btn) {
+      const dlg = document.getElementById(btn.dataset.open);
+      if (!dlg || typeof dlg.showModal !== 'function') return;
+      btn.addEventListener('click', function () {
+        dlg.showModal();
+        dlg.querySelector('.sheet-body').scrollTop = 0;
+      });
+    });
+    document.querySelectorAll('dialog.sheet').forEach(function (dlg) {
+      dlg.querySelector('[data-close]').addEventListener('click', function () { dlg.close(); });
+      // 點背景（彈窗外）關閉
+      dlg.addEventListener('click', function (e) {
+        if (e.target === dlg) dlg.close();
+      });
+    });
+  }
+
   markToday();
   initChecklist();
   initNav();
+  initDialogs();
 
   // ===== 離線快取（山區沒訊號也能看） =====
   if ('serviceWorker' in navigator && location.protocol !== 'file:') {

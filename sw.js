@@ -1,6 +1,6 @@
 // 離線快取：第一次開啟後，所有頁面與照片都存在手機上，山區沒網路也能看。
 // 內容有更新時，把 VERSION 改掉即可。
-const VERSION = 'cd2026-v1';
+const VERSION = 'cd2026-v3';
 const ASSETS = [
   './',
   'index.html',
@@ -10,7 +10,11 @@ const ASSETS = [
   'assets/js/app.js',
   'assets/img/bianlian.jpg',
   'assets/img/chengdu-skyline.jpg',
-  'assets/img/chunxi.jpg',
+  'assets/img/d1-chengdu.jpg',
+  'assets/img/d2-city.jpg',
+  'assets/img/d4-jiuzhai.jpg',
+  'assets/img/d6-siguniang.jpg',
+  'assets/img/d8-oldstreet.jpg',
   'assets/img/hotpot.jpg',
   'assets/img/jinli.jpg',
   'assets/img/jiuzhai-fiveflower.jpg',
@@ -19,10 +23,13 @@ const ASSETS = [
   'assets/img/kuanzhai.jpg',
   'assets/img/panda.jpg',
   'assets/img/shuangqiao.jpg',
-  'assets/img/siguniang-town.jpg',
-  'assets/img/siguniang.jpg',
   'assets/img/taikoo.jpg',
-  'assets/img/wuhou.jpg'
+  'assets/img/wuhou.jpg',
+  'assets/img/jz/route-full.png',
+  'assets/img/jz/route-short.png',
+  'assets/img/jz/detail-map.jpg',
+  'assets/img/jz/timed-route.jpg',
+  'assets/img/jz/official-map.jpg'
 ];
 
 self.addEventListener('install', (e) => {
