@@ -74,7 +74,12 @@
 
   <!-- D2 -->
   <article class="day" id="d2" data-date="2026-11-03">
-    <figure class="day-img"><img src="assets/img/d2-city.jpg" style="object-position: center 12%" alt="成都武侯祠紅牆竹林" loading="lazy"></figure>
+    <div class="day-img carousel">
+      <div class="slides">
+        <div class="slide"><img src="assets/img/d2-city.jpg" style="object-position: center 12%" alt="成都市區紅牆竹林" loading="lazy"><span class="slide-cap">成都市區</span></div>
+        <div class="slide"><img src="assets/img/taikoo.jpg" alt="成都遠洋太古里" loading="lazy"><span class="slide-cap">太古里</span></div>
+      </div>
+    </div>
     <div class="day-body">
       <header class="day-head">
         <span class="day-no">D2</span>
@@ -84,7 +89,7 @@
       <ol class="timeline">
         <li><time>上午</time><div>辦理<b>手機門號</b>、<b>銀行卡開戶</b>（記得帶台胞證／護照）</div></li>
         <li><time>下午</time><div><b>玉林街散步</b>：地鐵芳草街站 D 口出站</div></li>
-        <li><time>傍晚</time><div><b>春熙路＋太古里</b>逛街、晚餐</div></li>
+        <li><time>傍晚</time><div><b>春熙路＋</b><button type="button" class="spot-link" data-slide="1">太古里</button>逛街、晚餐</div></li>
       </ol>
       <button class="btn-detail" type="button" data-open="dlg-d2">📖 詳細行程</button>
       <div class="day-meta">
@@ -168,7 +173,13 @@
 
   <!-- D4 -->
   <article class="day mtn" id="d4" data-date="2026-11-05">
-    <figure class="day-img"><img src="assets/img/d4-jiuzhai.jpg" alt="九寨溝五花海秋色與雪山" loading="lazy"></figure>
+    <div class="day-img carousel">
+      <div class="slides">
+        <div class="slide"><img src="assets/img/d4-jiuzhai.jpg" alt="九寨溝五花海秋色與雪山" loading="lazy"><span class="slide-cap">五花海</span></div>
+        <div class="slide"><img src="assets/img/jiuzhai-pearl.jpg" alt="九寨溝珍珠灘瀑布" loading="lazy"><span class="slide-cap">珍珠灘瀑布</span></div>
+        <div class="slide"><img src="assets/img/jiuzhai-fiveflower.jpg" alt="五花海湖畔秋色" loading="lazy"><span class="slide-cap">五花海湖畔</span></div>
+      </div>
+    </div>
     <div class="day-body">
       <header class="day-head">
         <span class="day-no">D4</span>
@@ -179,7 +190,7 @@
         <li><time>08:30</time><div>飯店早餐後進溝，帶台胞證＋預約紀錄</div></li>
         <li><time>上午</time><div><b>中線（樹正溝）</b>：樹正寨、樹正群海、老虎海、樹正瀑布、雙龍海</div></li>
         <li><time>中午</time><div><b>諾日朗</b>中心站吃午餐</div></li>
-        <li><time>下午</time><div><b>右線（日則溝）</b>：箭竹海、熊貓海、五花海、珍珠灘瀑布<br><b>左線（則查窪溝）</b>：長海、五彩池、諾日朗瀑布</div></li>
+        <li><time>下午</time><div><b>右線（日則溝）</b>：箭竹海、熊貓海、<button type="button" class="spot-link" data-slide="0">五花海</button>、<button type="button" class="spot-link" data-slide="1">珍珠灘瀑布</button><br><b>左線（則查窪溝）</b>：長海、五彩池、諾日朗瀑布</div></li>
       </ol>
       <button class="btn-detail" type="button" data-open="dlg-d4">📖 詳細行程＋路線圖</button>
       <div class="note">⛰️ 長海一帶海拔約 3,100 m，比溝口冷很多：洋蔥式穿搭＋保暖外套；溝內餐點選擇少，可自備乾糧和水。</div>
@@ -348,7 +359,7 @@
       </header>
       <p class="wx">🌦️ 四姑娘山（小金縣）5–14°C・午前有陣雨・降雨 33%</p>
       <ol class="timeline">
-        <li><time>早上</time><div>四姑娘山鎮 → <b>雙橋溝</b>（需另外找接駁）</div></li>
+        <li><time>早上</time><div>民宿 → <b>雙橋溝</b>：當地小黃車併車 ¥15／人</div></li>
         <li><time>白天</time><div>溝內搭觀光車，先坐到最深處再一路往回、沿途下車拍照</div></li>
         <li class="hl"><time>17:30</time><div>雙橋溝搭大巴返回成都<span class="badge ok">已訂</span></div></li>
         <li><time>晚上</time><div>金科北路地鐵站附近下車 → 2 號線回飯店</div></li>
@@ -365,8 +376,15 @@
       <div class="sheet-body">
         <h4>🏔️ 雙橋溝</h4>
         <ul class="steps">
-          <li>早上退房，行李看能否寄放民宿或帶上車</li>
-          <li>四姑娘山鎮 → 雙橋溝口：需另外找接駁（前一天先問好）</li>
+          <li>早上退房，民宿 → 雙橋溝：當地小黃車併車 ¥15／人</li>
+        </ul>
+        <h4>🧳 行李寄放（雙橋溝售票大廳）</h4>
+        <ul class="steps">
+          <li>A. 售票大廳有人工寄放，¥10／件</li>
+          <li>B. 售票大廳進去<b>直接左轉到底</b>，免費但數量有限，早點到</li>
+        </ul>
+        <h4>🏔️ 遊覽</h4>
+        <ul class="steps">
           <li>溝內搭景區觀光車，先坐到最深處，再一路往回、沿途下車拍照</li>
           <li>山上氣溫低、可能下雪，保暖衣物和雨具都帶著</li>
         </ul>
@@ -385,7 +403,15 @@
 
   <!-- D8 -->
   <article class="day" id="d8" data-date="2026-11-09">
-    <figure class="day-img"><img src="assets/img/d8-oldstreet.jpg" alt="寬窄巷子夕陽街景" loading="lazy"></figure>
+    <div class="day-img carousel">
+      <div class="slides">
+        <div class="slide"><img src="assets/img/d8-oldstreet.jpg" style="object-position: center 60%" alt="寬窄巷子夕陽街景" loading="lazy"><span class="slide-cap">寬窄巷子</span></div>
+        <div class="slide"><img src="assets/img/ref/wuhou.jpg" style="object-position: center 10%" alt="成都武侯祠匾額與塑像" loading="lazy"><span class="slide-cap">成都武侯祠</span></div>
+        <div class="slide"><img src="assets/img/ref/jinli.jpg" style="object-position: center 40%" alt="錦里古街紅燈籠與小吃攤" loading="lazy"><span class="slide-cap">錦里古街</span></div>
+        <div class="slide"><img src="assets/img/ref/dongjiao.jpg" style="object-position: center 65%" alt="東郊記憶紅磚牆上的成都字樣" loading="lazy"><span class="slide-cap">東郊記憶・成都牆</span></div>
+        <div class="slide"><img src="assets/img/ref/shuyanfu.jpg" alt="蜀宴賦宴席與古裝表演" loading="lazy"><span class="slide-cap">蜀宴賦</span></div>
+      </div>
+    </div>
     <div class="day-body">
       <header class="day-head">
         <span class="day-no">D8</span>
@@ -393,10 +419,10 @@
       </header>
       <p class="wx">🌤️ 成都 13–18°C・午前多雲，午後晴朗・降雨 23%</p>
       <ol class="timeline">
-        <li><time>上午</time><div><b>寬窄巷子</b>拍照 → <b>奎星樓街</b>午餐</div></li>
-        <li><time>下午</time><div><b>武侯祠</b> → 隔壁<b>錦里古街</b>，有時間再去<b>東郊記憶</b></div></li>
+        <li><time>上午</time><div><button type="button" class="spot-link" data-slide="0">寬窄巷子</button>拍照 → <b>奎星樓街</b>午餐</div></li>
+        <li><time>下午</time><div><button type="button" class="spot-link" data-slide="1">武侯祠</button> → 隔壁<button type="button" class="spot-link" data-slide="2">錦里古街</button>，有時間再去<button type="button" class="spot-link" data-slide="3">東郊記憶</button></div></li>
         <li class="hl"><time>17:10</time><div><b>妝造</b>（¥298）<span class="badge ok">已訂</span></div></li>
-        <li class="hl"><time>18:00</time><div><b>蜀宴賦</b>入席（18:30 開席、20:10 結束）<span class="badge ok">已訂</span></div></li>
+        <li class="hl"><time>18:00</time><div><button type="button" class="spot-link" data-slide="4">蜀宴賦</button>入席（18:30 開席、20:10 結束）<span class="badge ok">已訂</span></div></li>
       </ol>
       <button class="btn-detail" type="button" data-open="dlg-d8">📖 詳細行程</button>
       <div class="day-meta">
@@ -426,6 +452,10 @@
         </table>
         <p>普通席 ¥498・座位：<b>南廷 36、南廷 37</b></p>
         <p><a class="btn-map" href="https://surl.amap.com/2uycWHAmHdOe" target="_blank" rel="noopener">蜀宴賦 高德地圖</a></p>
+        <figure class="map-fig seats">
+          <img class="zoomable" src="assets/img/ref/shuyanfu-seats.jpg" alt="蜀宴賦座位圖，紅圈標示南廷 36、37 座位" loading="lazy">
+          <figcaption>座位圖：紅圈是我們的位子（南廷 36、37）。點圖可放大</figcaption>
+        </figure>
         <p class="tip">妝造 17:10 開始，下午行程最晚 16:30 要往餐廳移動。</p>
       </div>
     </dialog>
@@ -433,7 +463,12 @@
 
   <!-- D9 -->
   <article class="day" id="d9" data-date="2026-11-10">
-    <figure class="day-img"><img src="assets/img/panda.jpg" alt="成都大熊貓" loading="lazy"></figure>
+    <div class="day-img carousel">
+      <div class="slides">
+        <div class="slide"><img src="assets/img/ref/xianyu.jpg" style="object-position: center 70%" alt="大院河仙魚莊庭院與魚火鍋" loading="lazy"><span class="slide-cap">大院河・仙魚莊</span></div>
+        <div class="slide"><img src="assets/img/panda.jpg" alt="成都大熊貓" loading="lazy"><span class="slide-cap">熊貓周邊採買</span></div>
+      </div>
+    </div>
     <div class="day-body">
       <header class="day-head">
         <span class="day-no">D9</span>
@@ -442,7 +477,8 @@
       <p class="wx">⛅ 成都 13–18°C・多雲時晴・降雨 24%</p>
       <ol class="timeline">
         <li><time>白天</time><div>採買伴手禮、熊貓周邊，或去備用景點</div></li>
-        <li class="hl"><time>晚上</time><div>晚餐：<a class="pin" href="https://surl.amap.com/1TJaVTFE1r2rr" target="_blank" rel="noopener">大院河・仙魚莊（三聖花鄉店）</a></div></li>
+        <li class="hl"><time>晚上</time><div>晚餐：<button type="button" class="spot-link" data-slide="0">大院河・仙魚莊</button>（三聖花鄉店）
+          <a class="btn-map" href="https://surl.amap.com/1TJaVTFE1r2rr" target="_blank" rel="noopener">高德地圖</a></div></li>
       </ol>
       <button class="btn-detail" type="button" data-open="dlg-d9">📖 詳細行程</button>
       <div class="day-meta">
@@ -712,7 +748,8 @@
 
   <h3 class="sub">🎁 伴手禮與採買</h3>
   <ul class="plain card">
-    <li>推薦：<b>火鍋底料</b>、<b>狗屎糖</b>、<b>麻辣胡豆（蠶豆）</b></li>
+    <li>推薦：<b>火鍋底料</b>、<b>狗屎糖</b>、<b>麻辣胡豆（蠶豆）</b>、<b>老醋蠶豆</b></li>
+    <li>特產：<a class="pin" href="https://surl.amap.com/87VKLrM1p4Cg" target="_blank" rel="noopener">郭記四川特產菜市場</a></li>
     <li>超市：<a class="pin" href="https://surl.amap.com/1xlZEbhkF8RA" target="_blank" rel="noopener">永輝超市（文華廣場店）</a>、<a class="pin" href="https://surl.amap.com/2fgnimjYc6M0" target="_blank" rel="noopener">U+ 城市集市生活超市</a></li>
     <li>零食：<a class="pin" href="https://surl.amap.com/1XnBkdiK1ad30" target="_blank" rel="noopener">洽小可新鮮零食商店</a>、<a class="pin" href="https://surl.amap.com/2gLdbGGy1wb3r" target="_blank" rel="noopener">零食有鳴批發超市（玉林南路店）</a></li>
     <li>熊貓周邊：<a class="pin" href="https://surl.amap.com/1HFmbV6e1ccYz" target="_blank" rel="noopener">時代廣場 A 座 29 樓</a></li>
@@ -752,7 +789,7 @@
     <li><label><input type="checkbox" data-key="t-sim"> 辦理手機門號</label></li>
     <li><label><input type="checkbox" data-key="t-bank"> 辦理銀行卡開戶</label></li>
     <li><label><input type="checkbox" data-key="t-bianlian"> 看川劇變臉</label></li>
-    <li><label><input type="checkbox" data-key="t-gifts"> 買伴手禮（火鍋底料、狗屎糖、麻辣胡豆）</label></li>
+    <li><label><input type="checkbox" data-key="t-gifts"> 買伴手禮（火鍋底料、狗屎糖、麻辣胡豆、老醋蠶豆）</label></li>
   </ul>
 
   <h3 class="sub">💊 丹木斯（暈車藥）</h3>
@@ -772,7 +809,7 @@
   <p>成都・九寨溝・四姑娘山 2026 旅遊手冊</p>
   <details>
     <summary>照片來源</summary>
-    <p>D1、D8：Trip.com ・ D2：gotravellingworld.com ・ D4：東南旅遊 settour.com.tw ・ D6：燦星旅遊 travel4u.com.tw</p>
+    <p>D1、D8：Trip.com ・ D2：gotravellingworld.com ・ D4：東南旅遊 settour.com.tw ・ D6：燦星旅遊 travel4u.com.tw ・ 武侯祠、錦里、東郊記憶、蜀宴賦、仙魚莊、座位圖：行前蒐集的參考圖</p>
     <p>以下來自 Wikimedia Commons：</p>
     <ul>
       <li>九寨溝五花海：Culantor Lin，CC BY-SA 2.0</li>
@@ -789,6 +826,12 @@
     </ul>
   </details>
 </footer>
+
+<dialog class="lightbox" id="lightbox" aria-label="照片放大">
+  <button class="sheet-close" type="button" data-close aria-label="關閉">✕</button>
+  <img alt="">
+  <p class="lightbox-cap"></p>
+</dialog>
 
 <script src="assets/js/app.js"></script>
 </body>

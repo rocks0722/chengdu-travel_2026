@@ -109,10 +109,82 @@
     });
   }
 
+  // ===== 每日照片輪播（左右滑動） =====
+  function initCarousels() {
+    document.querySelectorAll('.carousel').forEach(function (c) {
+      const track = c.querySelector('.slides');
+      const slides = track.querySelectorAll('.slide');
+      if (slides.length < 2) return;
+
+      const count = document.createElement('span');
+      count.className = 'carousel-count';
+      const dots = document.createElement('div');
+      dots.className = 'carousel-dots';
+      slides.forEach(function (s, i) {
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.setAttribute('aria-label', '第 ' + (i + 1) + ' 張');
+        b.addEventListener('click', function () { go(i); });
+        dots.appendChild(b);
+      });
+      const prev = document.createElement('button');
+      prev.type = 'button'; prev.className = 'carousel-nav prev'; prev.textContent = '‹'; prev.setAttribute('aria-label', '上一張');
+      const next = document.createElement('button');
+      next.type = 'button'; next.className = 'carousel-nav next'; next.textContent = '›'; next.setAttribute('aria-label', '下一張');
+      c.append(count, dots, prev, next);
+
+      function current() { return Math.round(track.scrollLeft / track.clientWidth); }
+      function go(i) {
+        i = (i + slides.length) % slides.length;
+        track.scrollTo({ left: i * track.clientWidth, behavior: 'smooth' });
+      }
+      function update() {
+        const i = current();
+        count.textContent = (i + 1) + ' / ' + slides.length;
+        dots.querySelectorAll('button').forEach(function (b, j) { b.classList.toggle('on', j === i); });
+      }
+      prev.addEventListener('click', function () { go(current() - 1); });
+      next.addEventListener('click', function () { go(current() + 1); });
+      track.addEventListener('scroll', function () { window.requestAnimationFrame(update); }, { passive: true });
+      c.goTo = go;
+      update();
+    });
+
+    // 行程裡的景點名稱：點一下切換到那張照片
+    document.querySelectorAll('.spot-link').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        const c = btn.closest('.day').querySelector('.carousel');
+        if (!c || !c.goTo) return;
+        c.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        c.goTo(Number(btn.dataset.slide));
+      });
+    });
+  }
+
+  // ===== 照片放大 =====
+  function initLightbox() {
+    const box = document.getElementById('lightbox');
+    if (!box || typeof box.showModal !== 'function') return;
+    const big = box.querySelector('img');
+    const cap = box.querySelector('.lightbox-cap');
+    document.querySelectorAll('.slide img, .spot img, img.zoomable').forEach(function (img) {
+      img.addEventListener('click', function () {
+        big.src = img.currentSrc || img.src;
+        big.alt = img.alt;
+        const label = img.parentElement.querySelector('.slide-cap');
+        cap.textContent = label ? label.textContent : img.alt;
+        box.showModal();
+      });
+    });
+    box.addEventListener('click', function () { box.close(); });
+  }
+
   markToday();
   initChecklist();
   initNav();
   initDialogs();
+  initCarousels();
+  initLightbox();
 
   // ===== 離線快取（山區沒訊號也能看） =====
   if ('serviceWorker' in navigator && location.protocol !== 'file:') {

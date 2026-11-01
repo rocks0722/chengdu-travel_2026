@@ -1,6 +1,6 @@
 // 離線快取：第一次開啟後，所有頁面與照片都存在手機上，山區沒網路也能看。
 // 內容有更新時，把 VERSION 改掉即可。
-const VERSION = 'cd2026-v3';
+const VERSION = 'cd2026-v4';
 const ASSETS = [
   './',
   'index.html',
@@ -25,6 +25,12 @@ const ASSETS = [
   'assets/img/shuangqiao.jpg',
   'assets/img/taikoo.jpg',
   'assets/img/wuhou.jpg',
+  'assets/img/ref/wuhou.jpg',
+  'assets/img/ref/jinli.jpg',
+  'assets/img/ref/dongjiao.jpg',
+  'assets/img/ref/shuyanfu.jpg',
+  'assets/img/ref/shuyanfu-seats.jpg',
+  'assets/img/ref/xianyu.jpg',
   'assets/img/jz/route-full.png',
   'assets/img/jz/route-short.png',
   'assets/img/jz/detail-map.jpg',

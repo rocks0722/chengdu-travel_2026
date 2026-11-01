@@ -22,11 +22,11 @@ https://surl.amap.com/6gy4TTI1kdJr
 https://surl.amap.com/1dB0eLnU1b93k
 成都-東郊記憶
 https://surl.amap.com/2y6aHiBcO6Ll
-成都-九眼桥
+成都-九眼橋
 https://surl.amap.com/2yjOrrbkl6aH
-都江堰-都江堰景区
+都江堰-都江堰景區
 https://surl.amap.com/1AJ8bRoCVarC
-都江堰-灌县古城
+都江堰-灌縣古城
 https://surl.amap.com/2os1ERRo6d7E
 
 ==== 逛街 ====
@@ -51,9 +51,9 @@ https://surl.amap.com/2uycWHAmHdOe
 https://surl.amap.com/1HxIwPtsOacl
 翠孃孃老火鍋(春熙路老店)
 https://surl.amap.com/2E9sQAEydgqb
-愛尚菌·云南野生菌火鍋云南菜·湯鍋(春熙路太古里店)
+愛尚菌·雲南野生菌火鍋雲南菜·湯鍋(春熙路太古里店)
 https://surl.amap.com/2f0lcOp81eePZ
-大院河·仙鱼莊(三圣花乡店)
+大院河·仙魚莊(三聖花鄉店)
 https://surl.amap.com/1TJaVTFE1r2rr
 
 
@@ -65,6 +65,8 @@ https://surl.amap.com/1YR4lSYSm0jM
 ==== 商店 ====
 永輝超市(文華廣場店)
 https://surl.amap.com/1xlZEbhkF8RA
+郭記四川特產菜市場
+https://surl.amap.com/87VKLrM1p4Cg
 時代廣場A座
 https://surl.amap.com/1HFmbV6e1ccYz
 洽小可新鮮零食商店
@@ -76,9 +78,9 @@ https://surl.amap.com/2gLdbGGy1wb3r
 
 
 ==== 交通 ====
-成都东站
+成都東站
 https://surl.amap.com/2fkIeR4Si5fw
-茶店子客运站
+茶店子客運站
 https://surl.amap.com/2hF0HNMy1h7KG
 
 
